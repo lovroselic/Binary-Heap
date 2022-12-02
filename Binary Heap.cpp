@@ -62,11 +62,11 @@ public:
 	void siftDown(int i) {
 		int maxIndex = i;
 		int L = this->leftChild(i);
-		if (L <= this->size() - 1 && this->HEAP[L] < this->HEAP[maxIndex]) {
+		if (L < this->size() && this->HEAP[L] < this->HEAP[maxIndex]) {
 			maxIndex = L;
 		}
 		int R = this->rightChild(i);
-		if (R <= this->size() - 1 && this->HEAP[R] < this->HEAP[maxIndex]) {
+		if (R < this->size() && this->HEAP[R] < this->HEAP[maxIndex]) {
 			maxIndex = R;
 		}
 		if (i != maxIndex) {
